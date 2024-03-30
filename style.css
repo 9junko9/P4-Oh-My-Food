@@ -19,37 +19,32 @@ header {
 }
 
 main .city {
+  display: flex;
   text-align: center;
   background-color: #eaeaea;
   color: #353535;
-  display: flex;
   align-items: center;
   justify-content: center;
   gap: 17px;
   font-size: 16px;
   font-weight: 500;
 }
-
-main .i {
+main .city i {
   height: 16px;
 }
 
-/*Explore*/
 .explore {
   text-align: center;
   position: relative;
   padding: 0 10px;
 }
-
 .explore h1 {
   font-size: 24px;
   height: 68px;
 }
-
 .explore button {
   border-radius: 25px;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   color: white;
   font-weight: 500;
   font-size: 16px;
@@ -57,17 +52,37 @@ main .i {
   padding: 16px 32px;
   background-color: #686868;
   cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
-
 .explore button:hover {
   transform: scale(1.02);
 }
-
 .explore p {
   color: #353535;
   font-size: 18px;
   height: 46px;
   font-weight: 300;
+}
+
+.functioning ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .functioning ol {
+    flex-direction: column;
+  }
+}
+.functioning li {
+  background-color: #f6f6f6;
+  padding: 24px;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.functioning li:hover {
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=style.css.map */

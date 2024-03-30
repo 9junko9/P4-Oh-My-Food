@@ -1,0 +1,35 @@
+.explore {
+  text-align: center;
+  position: relative;
+  padding: 0 10px;
+  & h1 {
+    font-size: 24px;
+    height: 68px;
+  }
+  & button {
+    border-radius: 25px;
+    background-image: linear-gradient(
+      0deg,
+      rgba(147, 86, 220, 0.9),
+      rgba(255, 121, 218, 0.9)
+    );
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    padding: 16px 32px;
+    background-color: #686868;
+    cursor: pointer;
+    @include base-shadow;
+  }
+  & button:hover {
+    @include zoom;
+  }
+  & p {
+    color: #353535;
+
+    font-size: 18px;
+    height: 46px;
+    font-weight: 300;
+  }
+}
