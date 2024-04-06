@@ -1,0 +1,18 @@
+main .city {
+  padding: 16px;
+  background-color: #e3e3e3;
+  display: flex;
+  justify-content: center;
+
+  & i {
+    height: 16px;
+  }
+  & input {
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    background-color: #e3e3e3;
+    font-size: 1rem;
+    margin: 0;
+  }
+}

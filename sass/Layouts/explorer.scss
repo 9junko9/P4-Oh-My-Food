@@ -1,7 +1,10 @@
+@import "../base/base.scss";
+
 .explore {
+  background-color: #f6f6f6;
   text-align: center;
   position: relative;
-  padding: 0 10px;
+  padding: 30px;
   & h1 {
     font-size: 24px;
     height: 68px;

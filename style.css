@@ -1,14 +1,4 @@
 @charset "UTF-8";
-/*Général*/
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0px;
-}
-
 /*Header and search*/
 header {
   text-align: center;
@@ -19,24 +9,37 @@ header {
 }
 
 main .city {
+  padding: 16px;
+  background-color: #e3e3e3;
   display: flex;
-  text-align: center;
-  background-color: #eaeaea;
-  color: #353535;
-  align-items: center;
   justify-content: center;
-  gap: 17px;
-  font-size: 16px;
-  font-weight: 500;
 }
 main .city i {
   height: 16px;
 }
+main .city input {
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  background-color: #e3e3e3;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/*Général*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
 
 .explore {
+  background-color: #f6f6f6;
   text-align: center;
   position: relative;
-  padding: 0 10px;
+  padding: 30px;
 }
 .explore h1 {
   font-size: 24px;
@@ -64,25 +67,65 @@ main .city i {
   font-weight: 300;
 }
 
+.functioning {
+  padding: 48px 180px;
+  counter-reset: steps;
+}
 .functioning ol {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 26px 0 68px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .functioning ol {
     flex-direction: column;
   }
 }
 .functioning li {
+  position: relative;
+  list-style-type: none;
   background-color: #f6f6f6;
   padding: 24px;
   flex-grow: 1;
   border-radius: 20px;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
+.functioning li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9356dc;
+  position: absolute;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 22px;
+  left: -12px;
+}
 .functioning li:hover {
   transform: scale(1.02);
+}
+.functioning li i.fa-solid {
+  margin-right: 16px;
+  color: #7e7e7e;
+  font-size: 20px;
+}
+
+/*Général*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
