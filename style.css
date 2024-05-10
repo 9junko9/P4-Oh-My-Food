@@ -453,8 +453,6 @@ footer {
   margin-right: -64px;
   width: 64px;
   transition: margin-right 0.5s;
-  transform: translateX(48px) rotate(-270deg);
-  transition: all 0.5s ease-in-out;
 }
 .menus .menus__category .menu-item .menu-item__check i {
   display: grid;
@@ -468,6 +466,10 @@ footer {
 .menus .menus__category .menu-item:hover .menu-item__check {
   margin-right: 0;
   transform: translateX(0) rotate(0deg);
+}
+.menus .menus__category .menu-item:hover .menu-item__check i {
+  transform: translateX(0) rotate(-360deg);
+  transition: all 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

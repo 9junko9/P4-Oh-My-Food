@@ -132,8 +132,7 @@
         margin-right: -64px;
         width: 64px;
         transition: margin-right 0.5s;
-        transform: translateX(48px) rotate(-270deg);
-        transition: all 0.5s ease-in-out;
+
         i {
           display: grid;
           place-items: center;
@@ -148,6 +147,10 @@
         .menu-item__check {
           margin-right: 0;
           transform: translateX(0) rotate(0deg);
+          i {
+            transform: translateX(0) rotate(-360deg);
+            transition: all 0.5s ease-in-out;
+          }
         }
       }
     }
