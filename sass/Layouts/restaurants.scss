@@ -1,1 +1,78 @@
+@import "../utils/variables.scss";
+@import "../utils/colors.scss";
+@import "../utils/mixins.scss";
 
+.restaurants {
+  background-color: #f6f6f6;
+  margin-bottom: 32px;
+  @media (min-width: $breackpoint) {
+    padding: 0px 180px;
+  }
+  h2 {
+    padding-top: 30px;
+    margin-bottom: 54px;
+  }
+}
+
+.restaurants__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  @media (max-width: $breackpoint) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
+  &__image {
+    border-radius: 16px 16px 0 0;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+  }
+
+  &__description {
+    position: relative;
+  }
+  .heart {
+    @include heart;
+  }
+
+  i {
+    font-size: 25px;
+    position: absolute;
+    right: 16px;
+    top: 30%;
+  }
+
+  h3,
+  p {
+    padding: 5px;
+    background-color: white;
+    margin-top: -3px;
+  }
+  h3 {
+    padding-top: 8px;
+  }
+  p {
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+.new {
+  position: relative;
+}
+.new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: $third-color;
+  color: darken($third-color, 50%);
+  display: grid;
+  place-items: center;
+  right: 16px;
+  top: 16px;
+  z-index: 1;
+}

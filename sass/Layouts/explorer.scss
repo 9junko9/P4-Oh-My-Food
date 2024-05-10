@@ -1,4 +1,6 @@
 @import "../base/base.scss";
+@import "../utils/colors.scss";
+@import "../utils/mixins.scss";
 
 .explore {
   background-color: #f6f6f6;
@@ -10,29 +12,49 @@
     height: 68px;
   }
   & button {
-    border-radius: 25px;
-    background-image: linear-gradient(
-      0deg,
-      rgba(147, 86, 220, 0.9),
-      rgba(255, 121, 218, 0.9)
-    );
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-    border: none;
-    padding: 16px 32px;
-    background-color: #686868;
-    cursor: pointer;
+    margin-bottom: 57px;
+    @include base-button;
     @include base-shadow;
   }
-  & button:hover {
-    @include zoom;
-  }
+
   & p {
     color: #353535;
 
     font-size: 18px;
     height: 46px;
     font-weight: 300;
+  }
+}
+
+.loader {
+  $animation-duration: 3s;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.9;
+  animation: disappear 200ms $animation-duration forwards;
+  transform-origin: top;
+  i {
+    color: $main-color;
+    animation: spin $animation-duration infinite linear;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
