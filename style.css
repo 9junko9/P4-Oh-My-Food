@@ -46,7 +46,7 @@ a {
   background-color: #f6f6f6;
   text-align: center;
   position: relative;
-  padding: 30px;
+  padding: 39px;
 }
 .explore h1 {
   font-size: 24px;
@@ -54,6 +54,7 @@ a {
 }
 .explore button {
   margin-bottom: 57px;
+  margin-bottom: 25px;
   border-radius: 25px;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   color: white;
@@ -70,7 +71,8 @@ a {
 }
 .explore p {
   color: #353535;
-  font-size: 18px;
+  margin-bottom: 27px;
+  font-size: 17px;
   height: 46px;
   font-weight: 300;
 }
@@ -106,29 +108,40 @@ a {
   }
 }
 .functioning {
-  margin-top: 30px;
+  margin-top: 48px;
+  padding: 20px;
+  counter-reset: steps;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
   .functioning {
     padding: 0px 180px;
   }
 }
+.functioning h2 {
+  font-size: 24px;
+}
 .functioning ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
+  flex-direction: column;
+  margin-top: 26px;
+  gap: 25px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   padding: 26px 0 68px;
 }
-@media (max-width: 1000px) {
+@media (min-width: 1001px) {
   .functioning ol {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
   }
 }
 .functioning li {
   position: relative;
+  display: flex;
+  align-items: center;
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 24px;
@@ -137,7 +150,7 @@ a {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 .functioning li::before {
-  content: counter(steps);
+  content: counter(steps) " ";
   counter-increment: steps;
   display: flex;
   align-items: center;
@@ -165,15 +178,17 @@ a {
 .restaurants {
   background-color: #f6f6f6;
   margin-bottom: 32px;
+  padding: 20px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
   .restaurants {
     padding: 0px 180px;
   }
 }
 .restaurants h2 {
   padding-top: 30px;
-  margin-bottom: 54px;
+  margin-bottom: 28px;
+  font-size: 24px;
 }
 
 .restaurants__cards {
@@ -181,7 +196,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1001px) {
   .restaurants__cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -269,14 +284,21 @@ footer {
 
 .footer-layout {
   padding: 24px;
-  max-width: 1000px;
   margin: auto;
+}
+@media (min-width: 1001px) {
+  .footer-layout {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 16px;
+  }
 }
 .footer-layout p {
   font-family: "Shrikhand";
   font-size: 19px;
   margin: 0;
-  padding-bottom: 16px;
 }
 
 .nav__link {
@@ -291,6 +313,13 @@ footer {
 
 .nav ul {
   list-style-type: none;
+}
+@media (min-width: 1001px) {
+  .nav ul {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
 }
 
 @keyframes appear {
@@ -321,20 +350,28 @@ footer {
 }
 
 .intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
-  padding: 13px 0;
   position: relative;
+}
+@media (min-width: 1001px) {
+  .intro {
+    margin: 0 193px;
+  }
 }
 .intro h2 {
   font-family: "Shrikhand";
-  font-size: 28px;
+  font-size: 24px;
   text-align: left;
   padding: 17px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
   .intro h2 {
-    padding: 0 180px;
+    padding: 40px 180px;
+    text-align: center;
   }
 }
 
@@ -348,8 +385,8 @@ footer {
 .heartpages {
   font-size: 25px;
   position: absolute;
-  right: 16px;
-  top: 36%;
+  right: 15%;
+  top: 38%;
 }
 
 .heartanime {
@@ -369,17 +406,18 @@ footer {
   padding: 13px;
   background: #f6f6f6;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
   .resto-main {
-    padding: 0 180px;
+    margin: 0 193px;
   }
 }
-.resto-main section.order {
-  display: grid;
-  place-items: center;
+.resto-main .order {
+  display: flex;
+  justify-content: center;
   margin: 40px;
 }
 .resto-main button {
+  margin-bottom: 25px;
   border-radius: 25px;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   color: white;
@@ -398,7 +436,7 @@ footer {
 .menus {
   display: grid;
   background: #f6f6f6;
-  gap: 40px;
+  gap: 12px;
 }
 .menus h3 {
   text-transform: uppercase;

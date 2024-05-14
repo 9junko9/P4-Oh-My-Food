@@ -8,14 +8,20 @@ footer {
 
 .footer-layout {
   padding: 24px;
-  max-width: 1000px;
+
   margin: auto;
+  @media (min-width: $breackpoint) {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 16px;
+  }
 
   p {
     font-family: "Shrikhand";
     font-size: 19px;
     margin: 0;
-    padding-bottom: 16px;
   }
 }
 
@@ -34,4 +40,9 @@ footer {
 }
 .nav ul {
   list-style-type: none;
+  @media (min-width: $breackpoint) {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
 }

@@ -1,29 +1,41 @@
 @import "../utils/colors.scss";
 @import "../utils/variables.scss";
+@import "../utils/mixins.scss";
 
 .functioning {
+  margin-top: 48px;
+  padding: 20px;
+  counter-reset: steps;
   @media (min-width: $breackpoint) {
     padding: 0px 180px;
   }
-  margin-top: 30px;
+  h2 {
+    font-size: 24px;
+  }
 
   & ol {
     display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
+    flex-direction: column;
+    margin-top: 26px;
+    gap: 25px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     padding: 26px 0 68px;
-
-    @media (max-width: 1000px) {
-      flex-direction: column;
+    @media (min-width: $breackpoint) {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
     }
   }
   & li {
     position: relative;
+    display: flex;
+    align-items: center;
+
     &::before {
-      content: counter(steps);
+      content: counter(steps) " ";
       counter-increment: steps;
       display: flex;
       align-items: center;
